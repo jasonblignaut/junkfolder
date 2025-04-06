@@ -31,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -39,8 +40,9 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: url('/images/background.png') no-repeat center center fixed;
+            background: url('/images/background.png') no-repeat center center;
             background-size: cover;
+            background-attachment: scroll; /* Ensures background displays on mobile */
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
@@ -82,7 +84,7 @@
 
         /* Header */
         header {
-            background: #0c0a0a; /* Updated to the specified dark color */
+            background: #0c0a0a;
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -115,7 +117,7 @@
 
         nav ul li {
             display: inline;
-            margin: 0 25px;
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -133,7 +135,7 @@
         /* Hero Section */
         .hero {
             background: rgba(0, 0, 0, 0.6);
-            padding: 120px 20px;
+            padding: 80px 20px;
             text-align: center;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -141,13 +143,13 @@
         }
 
         .hero h2 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
             font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin-top: 10px;
         }
 
@@ -156,14 +158,13 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Sections */
+        /* General Section Styles */
         .services, .gallery, .about, .contact, .map {
-            padding: 60px 20px;
+            padding: 40px 15px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             animation: slideUp 1s ease-in-out;
         }
@@ -175,9 +176,9 @@
 
         .services h2, .gallery h2, .about h2, .contact h2, .map h2 {
             color: #ffc107;
-            font-size: 2.5em;
+            font-size: 2em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 600;
             text-transform: uppercase;
         }
@@ -185,13 +186,13 @@
         /* Services Section */
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .service-item {
             background: #fff;
-            padding: 25px;
+            padding: 20px;
             border: 2px solid #ffc107;
             border-radius: 10px;
             text-align: center;
@@ -200,7 +201,7 @@
 
         .service-item h3 {
             color: #1a1a1a;
-            margin-top: 0;
+            margin: 0 0 10px;
             font-weight: 600;
         }
 
@@ -212,8 +213,8 @@
         /* Gallery Section */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
         .gallery-item {
@@ -221,7 +222,6 @@
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
         }
 
         .gallery-item img {
@@ -241,9 +241,9 @@
             right: 0;
             background: rgba(0, 0, 0, 0.8);
             color: #ffc107;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1em;
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
@@ -258,11 +258,11 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .contact input, .contact textarea {
-            padding: 15px;
+            padding: 12px;
             border: 2px solid #ffc107;
             border-radius: 5px;
             font-size: 1em;
@@ -278,8 +278,8 @@
             background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
             color: #1a1a1a;
             border: none;
-            padding: 15px;
-            font-size: 1.2em;
+            padding: 12px;
+            font-size: 1.1em;
             font-weight: 600;
             cursor: pointer;
             border-radius: 5px;
@@ -292,8 +292,8 @@
 
         .contact-details {
             text-align: center;
-            margin-top: 30px;
-            font-size: 1.1em;
+            margin-top: 20px;
+            font-size: 1em;
         }
 
         .contact-details a {
@@ -308,7 +308,7 @@
         /* Google Maps Section */
         .map iframe {
             width: 100%;
-            height: 400px;
+            height: 350px;
             border: 0;
             border-radius: 10px;
         }
@@ -332,8 +332,6 @@
         .whatsapp-btn img {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -379,8 +377,8 @@
             background: #1a1a1a;
             color: #ffc107;
             text-align: center;
-            padding: 30px;
-            font-size: 1em;
+            padding: 20px;
+            font-size: 0.9em;
         }
 
         footer a {
@@ -391,21 +389,56 @@
         footer a:hover {
             color: #fff;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .services h2, .gallery h2, .about h2, .contact h2, .map h2 {
+                font-size: 1.8em;
+            }
+
+            .service-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map iframe {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Preloader -->
     <div class="preloader" id="preloader">
-        <img src="/images/BEEworkslogo.png" alt="Preloader Icon">
+        <img src="/images/BEEworkslogo.png" alt="BEE WORKS Preloader Icon">
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/27826757675" target="_blank" class="whatsapp-btn" id="whatsappBtn">
-        <img src="/images/whatsapp.jpg" alt="WhatsApp">
+    <a href="https://wa.me/27826757675" target="_blank" class="whatsapp-btn" id="whatsappBtn" rel="noopener noreferrer">
+        <img src="/images/whatsapp.jpg" alt="Contact via WhatsApp">
     </a>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" title="Back to Top">↑</button>
+    <button class="back-to-top" id="backToTop" title="Back to Top" aria-label="Back to Top">↑</button>
 
     <header>
         <img src="/images/BEEworkslogo.png" alt="BEE WORKS Logo">
@@ -435,7 +468,7 @@
             </div>
             <div class="service-item">
                 <h3>Home Fixes</h3>
-                <p>Plumbing, gate repairs, painting keeping your place looking perfect.</p>
+                <p>Plumbing, gate repairs, painting keeping your place in looking perfect.</p>
             </div>
             <div class="service-item">
                 <h3>Renovations</h3>
@@ -452,43 +485,43 @@
         <h2>My Work</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/images/gallery1.jpg" alt="Chopping Board">
+                <img src="/images/gallery1.jpg" alt="Solid Wood Chopping Board" loading="lazy">
                 <div class="caption">Solid Wood Chopping Board</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery2.jpg" alt="Garden Arch">
+                <img src="/images/gallery2.jpg" alt="Garden Arch" loading="lazy">
                 <div class="caption">Garden Arch</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery3.jpg" alt="Braai Area">
+                <img src="/images/gallery3.jpg" alt="Custom Braai Area" loading="lazy">
                 <div class="caption">Custom Braai Area</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery4.jpg" alt="Gate Repair">
+                <img src="/images/gallery4.jpg" alt="Gate Repair" loading="lazy">
                 <div class="caption">Gate Repair</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery5.jpg" alt="Carport">
+                <img src="/images/gallery5.jpg" alt="New Carport" loading="lazy">
                 <div class="caption">New Carport</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery6.jpg" alt="Home Renovation">
+                <img src="/images/gallery6.jpg" alt="Home Renovation" loading="lazy">
                 <div class="caption">Home Renovation</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery7.jpg" alt="Plumbing Fix">
+                <img src="/images/gallery7.jpg" alt="Plumbing Work" loading="lazy">
                 <div class="caption">Plumbing Work</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery8.jpg" alt="Painting">
+                <img src="/images/gallery8.jpg" alt="Fresh Paint Job" loading="lazy">
                 <div class="caption">Fresh Paint Job</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery9.jpg" alt="Extension">
+                <img src="/images/gallery9.jpg" alt="House Extension" loading="lazy">
                 <div class="caption">House Extension</div>
             </div>
             <div class="gallery-item">
-                <img src="/images/gallery10.jpg" alt="Upgrade">
+                <img src="/images/gallery10.jpg" alt="Home Upgrade" loading="lazy">
                 <div class="caption">Home Upgrade</div>
             </div>
         </div>
@@ -522,28 +555,23 @@
 
     <footer>
         <p>© 2025 BEE WORKS (Brick2Brick Pty Ltd). Website Designed by 1FAR.</p>
-        <p><a href="http://brick2brick.co.za">brick2brick.co.za</a></p>
+        <p><a href="http://brick2brick.co.za" rel="noopener noreferrer">brick2brick.co.za</a></p>
     </footer>
 
     <script>
-        // Preloader Script
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            preloader.classList.add('fade-out');
+        // Preloader
+        window.addEventListener('load', () => {
+            document.getElementById('preloader').classList.add('fade-out');
         });
 
-        // WhatsApp Button Logic
+        // WhatsApp Button
         const whatsappBtn = document.getElementById('whatsappBtn');
+        setTimeout(() => whatsappBtn.classList.add('show'), 5000);
 
-        // Show WhatsApp button after 5 seconds
-        setTimeout(() => {
-            whatsappBtn.classList.add('show');
-        }, 5000);
-
-        // Show WhatsApp button and Back to Top button on scroll
-        window.addEventListener('scroll', function() {
+        // Scroll Behavior for WhatsApp and Back to Top
+        window.addEventListener('scroll', () => {
             const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 100) { // Show when scrolled down 100px
+            if (window.scrollY > 100) {
                 whatsappBtn.classList.add('show');
                 backToTop.classList.add('show');
             } else {
@@ -551,13 +579,9 @@
             }
         });
 
-        // Back to Top Button Logic
-        const backToTop = document.getElementById('backToTop');
-        backToTop.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // Back to Top
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
