@@ -1,1 +1,298 @@
-yes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BEE WORKS - Skilled craftsmanship in woodwork, home repairs, and renovations by Ken Pistorius.">
+    <meta name="keywords" content="woodwork, home repairs, renovations, plumbing, bee works, brick2brick, Ken Pistorius">
+    <meta name="author" content="Ken Pistorius - BEE WORKS">
+    <title>BEE WORKS | Ken Pistorius - Craftsmanship You Can Trust</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ffc107;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        nav {
+            background-color: #000;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x400?text=BEE+WORKS+Hero') no-repeat center;
+            background-size: cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .services, .gallery, .about, .contact {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services h2, .gallery h2, .about h2, .contact h2 {
+            color: #ffc107;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #ffc107;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .service-item h3 {
+            color: #000;
+            margin-top: 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffc107;
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+        .about {
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 2px solid #ffc107;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact button {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact button:hover {
+            background-color: #e0a800;
+        }
+        .contact-details {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #000;
+            color: #ffc107;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BEE WORKS</h1>
+        <p>Craftsmanship You Can Trust</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Welcome to BEE WORKS</h2>
+        <p>Hard work, honest service, and quality you can count on—built by hand, one job at a time.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>What I Do</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Woodwork</h3>
+                <p>Chopping boards, garden arches, and custom pieces made to last.</p>
+            </div>
+            <div class="service-item">
+                <h3>Home Fixes</h3>
+                <p>Plumbing, gate repairs, painting—keeping your place in top shape.</p>
+            </div>
+            <div class="service-item">
+                <h3>Renovations</h3>
+                <p>Big jobs like extensions, upgrades, and full home overhauls.</p>
+            </div>
+            <div class="service-item">
+                <h3>Outdoor Jobs</h3>
+                <p>Braai areas, carports, and garden setups done right.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>My Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/images/gallery1.jpg" alt="Chopping Board">
+                <div class="caption">Solid Wood Chopping Board</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery2.jpg" alt="Garden Arch">
+                <div class="caption">Garden Arch</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery3.jpg" alt="Braai Area">
+                <div class="caption">Custom Braai Area</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery4.jpg" alt="Gate Repair">
+                <div class="caption">Gate Repair</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery5.jpg" alt="Carport">
+                <div class="caption">New Carport</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery6.jpg" alt="Home Renovation">
+                <div class="caption">Home Renovation</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery7.jpg" alt="Plumbing Fix">
+                <div class="caption">Plumbing Work</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery8.jpg" alt="Painting">
+                <div class="caption">Fresh Paint Job</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery9.jpg" alt="Extension">
+                <div class="caption">House Extension</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery10.jpg" alt="Upgrade">
+                <div class="caption">Home Upgrade</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I’m Ken Pistorius, the man behind BEE WORKS. I’ve spent a lifetime working with my hands—building, fixing, and making things that stand the test of time. From chopping boards to full home renovations, I take pride in every job. My company, Brick2Brick Pty Ltd, is now BEE WORKS, and I’m still out there, busy as a bee, getting it done for folks like you.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form action="mailto:info@brick2brick.co.za" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="What do you need done?" required></textarea>
+            <button type="submit">Send It My Way</button>
+        </form>
+        <div class="contact-details">
+            <p><strong>Ken Pistorius</strong></p>
+            <p>174 Main Rd, Magaliessig, Sandton, 2191</p>
+            <p>Phone: 082 675 7675</p>
+            <p>Email: <a href="mailto:info@brick2brick.co.za">info@brick2brick.co.za</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 BEE WORKS (Brick2Brick Pty Ltd). Built by Ken Pistorius.</p>
+        <p><a href="http://brick2brick.co.za">brick2brick.co.za</a></p>
+    </footer>
+</body>
+</html>
